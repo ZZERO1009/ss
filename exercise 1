@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+void main() {
+
+unsigned int a = 118;
+printf("\n118 as binary = ");
+dec2bin(a);
+
+//read 8th bit of a :   a[7]
+unsigned int bit_check = a & (1 << 7);
+printf("\nresult1 = %d", bit_check);
+
+// set 8th (a[7])  bit as HIGH
+// YOUR CODE GOES HERE
+a|=(0<<7)
+printf("\nresult2 = ");
+dec2bin(a);
+
+}
+
+/////////////////////////
+void dec2bin(unsigned int n) {
+	unsigned int a = 0x80;
+	for (int i = 0; i < 8; i++) {
+	if ((a & n) == a)
+		printf("1");
+	else
+		printf("0");
+	a = a>> 1;
+	}
+}
